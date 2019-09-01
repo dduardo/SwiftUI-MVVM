@@ -11,8 +11,10 @@ import Foundation
 
 typealias ReposByUserCallback = (() throws -> [SearchRepositoryResponse]) -> Void
 
-class RepositoryService: RepositoryServiceProtocol {        
+class RepositoryService: RepositoryServiceProtocol {
     
+    // MARK: - Public methods
+
     /// Fetch  Reposotories from gitHub
     ///
     /// - Parameters:

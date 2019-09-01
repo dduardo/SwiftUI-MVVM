@@ -12,9 +12,9 @@ import Foundation
 typealias GitUserResponsesCallback = (() throws -> GitUsersResponse) -> Void
 typealias GitAvatarUserCallback = (() throws -> UIImage) -> Void
 
-
-//adicionar protocolo para requisição :D
 class GitUserService: GitUserServiceProtocol {
+    
+    // MARK: - Public methods
     
     /// Fetch User from ther gitHub
     ///
@@ -45,9 +45,7 @@ class GitUserService: GitUserServiceProtocol {
     func fetchGitAvatarUser(avatarUrl: String, _ completion: @escaping GitAvatarUserCallback) {
         Alamofire.request(avatarUrl)
             .validate()
-            .responseData { (response) in
-                debugPrint("All Response IMAGE: \(response)")
-                
+            .responseData { (response) in                
                 switch response.result {
                 case .success(let data):
                     completion { self.convertToAvatarUser(data) }
@@ -57,7 +55,8 @@ class GitUserService: GitUserServiceProtocol {
         }
     }
     
-    
+    // MARK: - Private methods
+
     private func convertToGitUser(_ data: Data) -> GitUsersResponse? {
         let decoder = JSONDecoder()
         return try? decoder.decode(GitUsersResponse.self, from: data)

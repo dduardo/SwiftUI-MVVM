@@ -13,30 +13,19 @@ import UIKit
 class GitUserListRowViewModel:  ObservableObject {
     
     // MARK: Output
+    
     @Published private(set) var avatarUser: UIImage = UIImage()
     @Published private(set) var gitUser: GitUser
     @Published var errorMessage = ""
 
+    // MARK: - Properties
+
     private let service: GitUserServiceProtocol
+
+    // MARK: - Initializers
 
     init(gitUser: GitUser, service: GitUserServiceProtocol = GitUserService()) {
         self.service = service
         self.gitUser = gitUser
-//        if !gitUser.avatarURL.isEmpty {
-//            self.fetchGitAvatarUser(avatarUrl: gitUser.avatarURL)
-//        }
     }
-    
-//    private func fetchGitAvatarUser(avatarUrl: String) {
-//        service.fetchGitAvatarUser(avatarUrl: avatarUrl, { [weak self] (result, _) in
-//            guard let weakSelf = self else { return }
-//            do {
-//                let dataResult = try result()
-//                weakSelf.avatarUser = dataResult
-//            } catch {
-//                debugPrint(error.localizedDescription)
-//                weakSelf.errorMessage = Localizable.defaultErrorMessage.localize()
-//            }
-//        })
-//    }
 }

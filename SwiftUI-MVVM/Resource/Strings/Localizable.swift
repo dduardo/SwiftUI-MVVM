@@ -11,7 +11,17 @@
 
 import Foundation
 
-enum Localizable: String {    
+enum Localizable: String {
+    
+    // Screens
+    case gitUsers
+    case gitUserSearchPlaceholder
+    case repositories
+    
+    case webViewParameters
+    
+    // Error
+    case error
     case defaultErrorMessage
 
     // MARK: - Public Methods

@@ -10,13 +10,19 @@ import Foundation
 
 class GitUserManager: GitUserManagerProtocol {
     
+    // MARK: - Properties
+
     private let group = DispatchGroup()
     private let service: GitUserServiceProtocol?
     
+    // MARK: - Initializers
+
     init(service: GitUserServiceProtocol = GitUserService()) {
         self.service = service
     }
     
+    // MARK: - Public methods
+
     func fetch(userName: String, _ completion: @escaping ([GitUser]) -> Void) {
         var gitUsers: [GitUser] = []
         

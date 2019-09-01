@@ -12,15 +12,22 @@ import Combine
 final class GitUserListViewModel: ObservableObject {
 
     // MARK: Output
+    
     @Published private(set) var gitUsers: [GitUser] = []
     @Published var isErrorShown = false
     @Published var errorMessage = ""
 
+    // MARK: - Properties
+
     private let gitUserManager: GitUserManagerProtocol?
+
+    // MARK: - Initializers
 
     init(gitUserManager: GitUserManagerProtocol = GitUserManager()) {
         self.gitUserManager = gitUserManager
     }
+
+    // MARK: - Public methods
 
     func fetchGitUsers(userName: String) {
         gitUserManager?.fetch(userName: userName, { [weak self] (result) in

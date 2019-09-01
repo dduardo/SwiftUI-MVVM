@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 
 struct GitUserListView: View {
+    private let KIconSearch = "magnifyingglass"
+    
     @ObservedObject var gitUserListViewModel: GitUserListViewModel
     @State var searchTextField: String = ""
 
@@ -18,7 +20,7 @@ struct GitUserListView: View {
             NavigationView {
                 List {
                     HStack {
-                        TextField("Search Users", text: $searchTextField)
+                        TextField(Localizable.gitUserSearchPlaceholder.localize(), text: $searchTextField)
                         .padding(.all)
 
                         Button(action: {
@@ -26,7 +28,7 @@ struct GitUserListView: View {
                                 self.gitUserListViewModel.fetchGitUsers(userName: self.searchTextField)
                             }
                         }) {
-                            Image(systemName: "magnifyingglass")
+                            Image(systemName: self.KIconSearch)
                         }
                     }
 
@@ -35,11 +37,11 @@ struct GitUserListView: View {
                     }
                         
                     .alert(isPresented: $gitUserListViewModel.isErrorShown, content: { () -> Alert in
-                        Alert(title: Text("Error"), message: Text(gitUserListViewModel.errorMessage))
+                        Alert(title: Text(Localizable.error.localize()), message: Text(gitUserListViewModel.errorMessage))
                     })
                     
                 }
-                .navigationBarTitle(Text("GitUsers"))
+                .navigationBarTitle(Text(Localizable.gitUsers.localize()))
             }
         }
     }

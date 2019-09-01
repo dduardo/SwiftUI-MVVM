@@ -33,6 +33,7 @@
 		D97758A12319A3FC00A0B02B /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97758A02319A3FC00A0B02B /* RepositoryService.swift */; };
 		D97758A32319A41A00A0B02B /* RepositoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97758A22319A41A00A0B02B /* RepositoryServiceProtocol.swift */; };
 		D97758A5231C26E700A0B02B /* GitUserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97758A4231C26E700A0B02B /* GitUserListViewModel.swift */; };
+		D97758A8231C491300A0B02B /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97758A7231C491300A0B02B /* WebViewPage.swift */; };
 		D98BB3322314896F00C763EE /* GitUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98BB3312314896F00C763EE /* GitUserService.swift */; };
 		D9C3E8C1230DF3B700ED6325 /* GitUserRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C3E8C0230DF3B700ED6325 /* GitUserRepositoryView.swift */; };
 		D9E7CE61230CC99B00A265A8 /* GitUserListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7CE60230CC99B00A265A8 /* GitUserListRowView.swift */; };
@@ -93,6 +94,7 @@
 		D97758A02319A3FC00A0B02B /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		D97758A22319A41A00A0B02B /* RepositoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryServiceProtocol.swift; sourceTree = "<group>"; };
 		D97758A4231C26E700A0B02B /* GitUserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserListViewModel.swift; sourceTree = "<group>"; };
+		D97758A7231C491300A0B02B /* WebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
 		D98BB3312314896F00C763EE /* GitUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserService.swift; sourceTree = "<group>"; };
 		D9C3E8C0230DF3B700ED6325 /* GitUserRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserRepositoryView.swift; sourceTree = "<group>"; };
 		D9E7CE60230CC99B00A265A8 /* GitUserListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserListRowView.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		D922F0EB230CBB12008356A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D97758A6231C48FC00A0B02B /* WebView */,
 				D922F0E9230CBAC8008356A0 /* GitUserListView.swift */,
 				D9E7CE60230CC99B00A265A8 /* GitUserListRowView.swift */,
 				D9C3E8C0230DF3B700ED6325 /* GitUserRepositoryView.swift */,
@@ -329,6 +332,14 @@
 				D97758A22319A41A00A0B02B /* RepositoryServiceProtocol.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		D97758A6231C48FC00A0B02B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D97758A7231C491300A0B02B /* WebViewPage.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		D9E7CE64230CCAA300A265A8 /* Model */ = {
@@ -611,6 +622,7 @@
 				D97758A5231C26E700A0B02B /* GitUserListViewModel.swift in Sources */,
 				D922F0DC230CB853008356A0 /* String.swift in Sources */,
 				D9C3E8C1230DF3B700ED6325 /* GitUserRepositoryView.swift in Sources */,
+				D97758A8231C491300A0B02B /* WebViewPage.swift in Sources */,
 				D922F0AC230CB400008356A0 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

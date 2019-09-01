@@ -14,14 +14,14 @@ struct GitUserRepositoryView: View {
     @State var gitUser: GitUser
     
     var body: some View {
-//        NavigationView {
             List(viewModel.repositories, id:\.id) { item in
                 VStack {
-                    Text(verbatim: item.fullName)
+                    NavigationLink(destination: WebViewPage(repoName: item.fullName)) {
+                        Text(verbatim: item.fullName)
+                    }
                 }
             }
-            .navigationBarTitle(Text("Repositories"), displayMode: .inline)
+            .navigationBarTitle(Text(String(format: "%@ %@", gitUser.login, Localizable.repositories.localize())), displayMode: .inline)
             .onAppear(perform: { self.viewModel.fetchReposByUser(userName: self.gitUser.login) })
-//        }
     }
 }

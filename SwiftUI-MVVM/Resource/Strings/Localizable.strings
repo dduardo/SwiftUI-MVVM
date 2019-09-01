@@ -6,5 +6,11 @@
 //  Copyright © 2019 Carlos Eduardo Santiago. All rights reserved.
 //
 
-
+// Screens
+"gitUsers" = "GitUsers";
+"gitUserSearchPlaceholder" = "Search Users";
+"repositories" = "Repositories";
+"webViewParameters" = "%@/%@";
+// Errors
+"error" = "Error";
 "defaultErrorMessage" = "Something went wrong :( \n Please try again.";

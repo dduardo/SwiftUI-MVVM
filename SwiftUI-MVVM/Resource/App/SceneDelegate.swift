@@ -25,7 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView:
-//            GitUserRepositoryView(viewModel: .init(gitUser: GitUser(login: "", id: 0, avatarURL: "", gravatarID: "", url: "", htmlURL: "", followersURL: "", followingURL: "", gistsURL: "", starredURL: ""))))
             GitUserListView(gitUserListViewModel: .init()))
             self.window = window
             window.makeKeyAndVisible()

@@ -1,5 +1,5 @@
 //
-//  ApiConfig.swift
+//  ClientConfig.swift
 //  CoreApp
 //
 //  Created by Carlos Eduardo Santiago on 30/08/19.
@@ -8,11 +8,15 @@
 
 import Foundation
 
-struct ApiConfig {
+struct ClientConfig {
     
     // MARK: URLs
     static let baseURL: String = {
         return "https://api.github.com"
+    }()
+    
+    static let baseWebViewURL: String = {
+       return "https://github.com"
     }()
     
      // MARK: Users
