@@ -7,7 +7,25 @@
 		<key>SwiftUI-MVVM.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D922F0A3230CB400008356A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D922F0B9230CB403008356A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D922F0C4230CB403008356A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

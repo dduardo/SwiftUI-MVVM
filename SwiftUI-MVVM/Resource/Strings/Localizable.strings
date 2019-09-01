@@ -1,0 +1,10 @@
+//
+//  Localizable.swift
+//  CoreApp
+//
+//  Created by Carlos Eduardo Santiago on 30/08/19.
+//  Copyright © 2019 Carlos Eduardo Santiago. All rights reserved.
+//
+
+
+"defaultErrorMessage" = "Something went wrong :( \n Please try again.";
